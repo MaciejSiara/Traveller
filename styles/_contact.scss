@@ -1,0 +1,45 @@
+.contact {
+  background: url("../img/contact-mountain.png");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  background: rgba(19, 28, 39, 0.7);
+  width: 60%;
+  color: white;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: $mediaSize) {
+    width: 100%;
+  }
+
+  &__head {
+    text-align: center;
+    padding: 4rem;
+  }
+
+  &__name,
+  &__email {
+    text-align: center;
+    padding: 4rem;
+  }
+  &__label {
+    margin: 0 3rem;
+  }
+  &__button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 6rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  &__input {
+    padding: 1rem 2rem;
+  }
+}

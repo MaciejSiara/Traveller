@@ -1,0 +1,82 @@
+.benefits__head {
+  background: linear-gradient(
+    180deg,
+    rgba(46, 46, 46, 1) 0%,
+    rgba(102, 102, 102, 1) 36%,
+    rgba(176, 176, 176, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 3rem;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+
+  &__title {
+    padding: 1rem;
+  }
+}
+
+.cards {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+
+  &-item {
+    flex: 1 1 20rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1),
+      0px 20px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:first-child:hover {
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    &:last-child:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    &__image {
+      background: #76899c;
+    }
+
+    &__image img {
+      max-width: 10rem;
+      margin: 2rem;
+    }
+
+    &__title {
+      padding: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: $mediaSize) {
+  .cards-item {
+    &:hover {
+      transform: scale(1);
+    }
+    &:first-child:hover {
+      transform: scale(1) rotate(0deg);
+    }
+
+    &:last-child:hover {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+}

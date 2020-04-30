@@ -1,0 +1,19 @@
+.intro__section {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("../img/landing-page.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &h3 {
+    margin: 5rem;
+    align-self: center;
+  }
+}

@@ -1,0 +1,64 @@
+.main__head {
+  background-color: #131c27;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  transition: top 0.4s ease;
+
+  &__navigation {
+    padding: 1rem;
+    min-height: 10vh;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: $mediaSize) {
+      text-align: center;
+    }
+
+    &__list {
+      display: flex;
+      flex: 1 1 40rem;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    &__item {
+      position: relative;
+      padding: 1rem;
+
+      &:hover::after {
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+      }
+    }
+
+    &__item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 0;
+      margin: auto;
+      background-color: #060a0e;
+      visibility: none;
+      opacity: 0;
+      z-index: -1;
+      transition: 0.3s ease;
+      border-radius: 1rem;
+    }
+  }
+
+  &__logo {
+    flex: 1 1 40rem;
+    @media screen and (max-width: $mediaSize) {
+      padding: 2rem;
+    }
+  }
+}
