@@ -12,8 +12,25 @@
   justify-content: center;
   text-align: center;
 
-  &h3 {
+  & h3 {
     margin: 5rem;
     align-self: center;
+  }
+
+  & h2,
+  h3,
+  button {
+    opacity: 0;
+    animation: showContent 0.5s ease-in-out 0.7s forwards;
+  }
+}
+
+@keyframes showContent {
+  0% {
+    margin: 2rem;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

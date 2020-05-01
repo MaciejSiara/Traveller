@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="scripts/script.js" defer></script>
-    <title>Travelly | Travelling Agency</title>
+    <title>Traveller | Travelling Agency</title>
   </head>
   <body>
     <header class="main__head" id="main__head">
@@ -23,9 +23,15 @@
         <h1 id="logo" class="main__head__logo">Traveller</h1>
         <ul class="main__head__navigation__list">
           <li class="main__head__navigation__item"><a href="#">Home</a></li>
-          <li class="main__head__navigation__item"><a href="#locations">Locations</a></li>
-          <li class="main__head__navigation__item"><a href="#benefits">Benefits</a></li>
-          <li class="main__head__navigation__item"><a href="#contact">Contact</a></li>
+          <li class="main__head__navigation__item">
+            <a href="#locations">Locations</a>
+          </li>
+          <li class="main__head__navigation__item">
+            <a href="#benefits">Benefits</a>
+          </li>
+          <li class="main__head__navigation__item">
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -37,11 +43,19 @@
           Contact us now bellow
         </h3>
         <button>Book Now</button>
+
+       
       </section>
+
+       <div class="toTop">
+          <img src="icons/arrows.svg" alt="to-top-arrow" class="toTop-button" />
+        </div>
 
       <section id="locations" class="locations">
         <header class="locations__head">
-          <h2 class="locations__head-title">The Perfect Travelling Experience</h2>
+          <h2 class="locations__head-title">
+            The Perfect Travelling Experience
+          </h2>
           <h3 class="locations__head-info">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Omnis
             quasi aut ipsum nisi inventore maxime itaque <br />a quis
@@ -54,7 +68,7 @@
       <section id="benefits">
         <header class="benefits__head">
           <h2 class="benefits__head__title">The Perfect Travel</h2>
-          <h3>
+          <h3 class="benefits__head__info">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
             Velit praesentium odit esse.
           </h3>
@@ -99,13 +113,27 @@
           </header>
           <div class="form__name">
             <label class="form__label" for="name">Name:</label>
-            <input class="form__input" id="name" type="text" name="name" required />
+            <input
+              class="form__input"
+              id="name"
+              type="text"
+              name="name"
+              required
+            />
           </div>
           <div class="form__email">
             <label class="form__label" for="email">Email:</label>
-            <input class="form__input" id="email" type="email" name="email" required />
+            <input
+              class="form__input"
+              id="email"
+              type="email"
+              name="email"
+              required
+            />
           </div>
-          <button class="form__button" value="Submit" type="submit">Submit</button>
+          <button class="form__button" value="Submit" type="submit">
+            Submit
+          </button>
         </div>
       </section>
       <footer class="footer">

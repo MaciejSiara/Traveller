@@ -17,6 +17,12 @@
 
   &__title {
     padding: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  &__info {
+    opacity: 0;
+    transform: translateY(20px);
   }
 }
 
@@ -29,6 +35,8 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 0 1rem;
+  opacity: 0;
+  transform: translateY(20px);
 
   &-item {
     flex: 1 1 20rem;

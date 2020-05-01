@@ -76,6 +76,14 @@ button:focus {
   outline-color: #3791ff;
 }
 
+.appear-content {
+  opacity: 1 !important;
+  -webkit-transform: translate(0px, 0px) !important;
+          transform: translate(0px, 0px) !important;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
 @-webkit-keyframes opening {
   from {
     opacity: 0;
@@ -204,11 +212,39 @@ button:focus {
   text-align: center;
 }
 
-.intro__sectionh3 {
+.intro__section h3 {
   margin: 5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.intro__section h2,
+.intro__section h3,
+.intro__section button {
+  opacity: 0;
+  -webkit-animation: showContent 0.5s ease-in-out 0.7s forwards;
+          animation: showContent 0.5s ease-in-out 0.7s forwards;
+}
+
+@-webkit-keyframes showContent {
+  0% {
+    margin: 2rem;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showContent {
+  0% {
+    margin: 2rem;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .locations {
@@ -236,7 +272,11 @@ button:focus {
 .locations__head-title {
   padding: 1rem 0rem;
   text-decoration: underline;
-  text-decoration-thickness: 0.5rem;
+  opacity: 0;
+  -webkit-transform: translate(-20px, 20px);
+          transform: translate(-20px, 20px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 932px) {
@@ -254,6 +294,9 @@ button:focus {
   background-image: linear-gradient(#1d1212, #753c3c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-transform: translate(-20px, 20px);
+          transform: translate(-20px, 20px);
 }
 
 @media screen and (max-width: 932px) {
@@ -344,6 +387,15 @@ button:focus {
 
 .benefits__head__title {
   padding: 1rem;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.benefits__head__info {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 .cards {
@@ -363,6 +415,9 @@ button:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 1rem;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 .cards-item {
@@ -447,6 +502,9 @@ button:focus {
   border-radius: 2rem;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 @media screen and (max-width: 932px) {
@@ -539,6 +597,103 @@ button:focus {
 @media screen and (max-width: 932px) {
   .footer__wrapper__list {
     max-width: 100vw;
+  }
+}
+
+.toTop {
+  position: fixed;
+  background-color: #73b2ff;
+  -webkit-box-shadow: 0 0 5px #4178bb, 0 0 10px #4178bb;
+          box-shadow: 0 0 5px #4178bb, 0 0 10px #4178bb;
+  border-radius: 50%;
+  border: solid 2px #4178bb;
+  z-index: 2;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  bottom: -10%;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.toTop:hover {
+  -webkit-box-shadow: 0 0 20px #4178bb, 0 0 15px #4178bb;
+          box-shadow: 0 0 20px #4178bb, 0 0 15px #4178bb;
+}
+
+.toTop img {
+  width: 50%;
+  height: 50%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  fill: red;
+}
+
+.jumpTop {
+  -webkit-animation: jumpTop 0.5s ease-in-out forwards;
+          animation: jumpTop 0.5s ease-in-out forwards;
+}
+
+.jumpDown {
+  -webkit-animation: jumpDown 0.2s ease-in forwards;
+          animation: jumpDown 0.2s ease-in forwards;
+}
+
+@-webkit-keyframes jumpTop {
+  0% {
+    bottom: 0;
+  }
+  30% {
+    bottom: 12%;
+    height: 30px;
+  }
+  100% {
+    bottom: 10%;
+  }
+}
+
+@keyframes jumpTop {
+  0% {
+    bottom: 0;
+  }
+  30% {
+    bottom: 12%;
+    height: 30px;
+  }
+  100% {
+    bottom: 10%;
+  }
+}
+
+@-webkit-keyframes jumpDown {
+  0% {
+    bottom: 10%;
+  }
+  100% {
+    width: 0;
+    bottom: -10%;
+  }
+}
+
+@keyframes jumpDown {
+  0% {
+    bottom: 10%;
+  }
+  100% {
+    width: 0;
+    bottom: -10%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -70,6 +70,12 @@ button:focus {
   outline-color: #3791ff;
 }
 
+.appear-content{
+  opacity: 1 !important;
+  transform: translate(0px, 0px) !important;
+   transition: all .5s ease-in-out;
+}
+
 @keyframes opening {
   from {
     opacity: 0;

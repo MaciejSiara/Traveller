@@ -17,7 +17,9 @@
     &-title {
       padding: 1rem 0rem;
       text-decoration: underline;
-      text-decoration-thickness: 0.5rem;
+      opacity: 0;
+      transform: translate(-20px, 20px);
+      transition: all 0.5s ease-in-out;
 
       @media screen and (max-width: $mediaSize) {
         color: white;
@@ -32,6 +34,9 @@
       background-image: linear-gradient(rgb(29, 18, 18), rgb(117, 60, 60));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      opacity: 0;
+      transform: translate(-20px, 20px);
+
       @media screen and (max-width: $mediaSize) {
         background: rgba(26, 38, 53, 0.7);
         -webkit-text-fill-color: white;

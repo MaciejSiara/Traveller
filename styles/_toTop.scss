@@ -1,0 +1,67 @@
+.toTop {
+  position: fixed;
+
+  background-color: #73b2ff;
+  box-shadow: 0 0 5px rgba($color: #4178bb, $alpha: 1),
+    0 0 10px rgba($color: #4178bb, $alpha: 1);
+  border-radius: 50%;
+  border: solid 2px #4178bb;
+  z-index: 2;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  bottom: -10%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(50%);
+  transition: .2s ease;
+
+  &:hover{
+box-shadow: 0 0 20px rgba($color: #4178bb, $alpha: 1),
+    0 0 15px rgba($color: #4178bb, $alpha: 1);
+  }
+
+  & img {
+    width: 50%;
+    height: 50%;
+    transform: rotate(90deg);
+    fill: red;
+  }
+}
+
+.jumpTop {
+  animation: jumpTop 0.5s ease-in-out forwards;
+}
+
+.jumpDown{
+  animation: jumpDown 0.2s ease-in forwards;
+
+}
+
+@keyframes jumpTop {
+  0% {
+    bottom: 0;
+  }
+
+  30% {
+    bottom: 12%;
+    height: 30px;
+  }
+
+  100% {
+    bottom: 10%;
+  }
+}
+
+@keyframes jumpDown {
+    0%{
+        bottom: 10%;
+    }
+
+    100%{
+        width: 0;
+        bottom: -10%;
+    }
+}
