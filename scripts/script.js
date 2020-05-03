@@ -68,11 +68,6 @@ window.onscroll = () => {
   ];
 
   window.addEventListener("scroll", () => {
-    items[0].position = items[0].item.getBoundingClientRect().top;
-    let screenPosition = window.pageYOffset / 1.3;
-    if (items[0].position < screenPosition) {
-      items[0].item.classList.add("appear-content");
-    }
 
     items.forEach((el) => {
       el.position = el.item.getBoundingClientRect().top;
